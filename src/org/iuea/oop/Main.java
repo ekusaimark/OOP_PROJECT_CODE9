@@ -3,17 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.iuea.oop.modal;
+package org.iuea.oop;
 
+import org.iuea.oop.modal.Student;
 import org.iuea.oop.views.LoginView;
 
 /**
  *
  * @author USER
  */
-public class main {
+public class Main {
     public static void main(String[] args){
         //starts the Login page
         new LoginView().setVisible(true);
-    }
+        //Student s = new Student();
+        }
 }

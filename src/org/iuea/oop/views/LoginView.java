@@ -6,6 +6,7 @@
 package org.iuea.oop.views;
 
 import javax.swing.JOptionPane;
+import org.iuea.oop.modal.Student;
 
 
 public class LoginView extends javax.swing.JFrame {
@@ -185,15 +186,18 @@ public class LoginView extends javax.swing.JFrame {
         String username = txtusername.getText().trim();
         String password = txtpassword.getText();
         
-        if(username.equals("brian" ) && password.equals("g")){
+        if(username.equals("admin" ) && password.equals("g")){
             
+                      
             JOptionPane.showMessageDialog(null, "User logged in successfully");
+              Student s = new Student(); 
+              setVisible(false);
             //NewJFrame panel = new NewJFrame();
             //this.setVisible(false);
             //panel.setVisible(true);
         }
         else{
-            
+           
         JOptionPane.showMessageDialog(null, "User name and Password does not match what is expected");
         }
             
@@ -234,7 +238,9 @@ public class LoginView extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new LoginView().setVisible(true);
+                //Student s = new Student();
             }
+            
         });
     }
 
