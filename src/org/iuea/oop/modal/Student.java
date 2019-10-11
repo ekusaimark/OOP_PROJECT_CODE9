@@ -125,7 +125,7 @@ public class Student extends JFrame{
       // students form to insert data
       JPanel studentsForm = new JPanel();
      studentsForm.setLayout(null);
-      studentsForm.setBounds(20,80,500,300);
+      studentsForm.setBounds(20,20,500,300);
       studentsForm.setBackground(Color.WHITE);
       JLabel FnameLabel = new JLabel("First Name:");
       FnameLabel.setBounds(20,30,100,30);
@@ -154,7 +154,7 @@ public class Student extends JFrame{
       dob.setBounds(110,180,200,25);
       
       JButton submit = new JButton("Submit");
-      submit.setBounds(110,250,100,25);
+      submit.setBounds(90,250,100,25);
       submit.setBackground(Color.green);
       submit.setForeground(Color.white);
       
