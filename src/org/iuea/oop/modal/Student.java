@@ -303,79 +303,9 @@ public class Student extends JFrame{
               delete.setVisible(false);
           }
          });
+          
         
-         delete.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                 int i = table.getSelectedRow();
-                 tablePanel.setVisible(true);
-                 studentsForm.setVisible(false);
-                    if(i >= 0) {
-                        model.removeRow(i);
-                    } else {
-                        JOptionPane.showMessageDialog(null, "oops! Select values to delete");
-                    }
-                }   
-            });
-         
-          edit.addActionListener(new ActionListener(){
-          @override
-          public void actionPerformed(ActionEvent e){
-              try{
-                  add.setVisible(false);
-                  edit.setVisible(false);
-                  delete.setVisible(false);
-                  
-                  int i = table.getSelectedRow();
-                  FName.setText(model.getValueAt(i,0).toString());
-                  LName.setText(model.getValueAt(i,1).toString());
-                  Sex.setSelectedItem(model.getValueAt(i,2).toString());
-                  course.setText(model.getValueAt(i,3).toString());
-                  reg.setText(model.getValueAt(i,4).toString());
-                  dob.setDate((Date)model.getValueAt(i,5));
-           tablePanel.setVisible(false);
-           studentsForm.setVisible(true);
-                         
-            submitp = new JButton("Submit);
-            submitp.setBounds(90,250,100,25);
-            submitp.setBackground(Color.green);
-            submitp.setForeground(Color.white);
-           studentsForm.add(submitp);
-          studentsForm.setVisible(true);
-           studentsPanel.add(studentsForm);
-               } catch(Exception exd) {
-                        JOptionPane.showMessageDialog(null, "False edit selection");
-                        add.setVisible(true);
-                        edit.setVisible(true);
-                        delete.setVisible(true);
-                    }
-                    
-             submitp.addActionListener(new ActionListener() {
-             @Override
-             public void actionPerformed(ActionEvent e) {
-                    int i = table.getSelectedRow();
-                        if (i >= 0) {
-                                add.setVisible(true);
-                                edit.setVisible(true);
-                                delete.setVisible(true);
-                                model.setValueAt(FName.getText(),i, 0);
-                                model.setValueAt(LName.getText(),i, 1);
-                                model.setValueAt(Sex.getSelectedItem(),i, 2);
-                                model.setValueAt(course.getText(),i, 3);
-                                model.setValueAt(reg.getText(),i,4);
-                                model.setValueAt(dob.getDate(),i, 5);
-                               
-                         tablePanel.setVisible(true);
-                         studentsForm.setVisible(false);
-                        } else {
-                                JOptionPane.showMessageDialog(null, "select non-null value");
-                            } 
-                        }
-                        
-                    });
-                }
-            });
-                  
+                 
       //creating footer panel
       JPanel footer = new JPanel();
       footer.setBackground(Color.white);
