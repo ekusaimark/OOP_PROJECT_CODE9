@@ -280,6 +280,17 @@ public class Student extends JFrame{
               studentsPanel.add(tablePanel);
           }
          });
+        
+             cancel.addActionListener(newActionListener(){
+             @override
+             public void actionPerformed(ActionEvent e){
+                 tablePanel.setVisible(true);
+                 studentsForm.setVisible(false);
+                 add.setvisible(true);
+                 edit.setVsible(true);
+                 delete.setVisible(true);
+             }
+          });
           
           add.addActionListener(new ActionListener(){
           @Override
@@ -292,6 +303,9 @@ public class Student extends JFrame{
               delete.setVisible(false);
           }
          });
+        
+        
+                 
       //creating footer panel
       JPanel footer = new JPanel();
       footer.setBackground(Color.white);
