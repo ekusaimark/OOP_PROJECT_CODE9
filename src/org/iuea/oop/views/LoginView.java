@@ -185,7 +185,7 @@ public class LoginView extends javax.swing.JFrame {
         String username = txtusername.getText().trim();
         String password = txtpassword.getText();
         
-        if(username.equals("brian" ) && password.equals("g")){
+        if(username.equals("admin" ) && password.equals("g")){
             
             JOptionPane.showMessageDialog(null, "User logged in successfully");
             //NewJFrame panel = new NewJFrame();
